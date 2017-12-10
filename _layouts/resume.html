@@ -170,16 +170,14 @@
       <section class="content-section">
 
         <header class="section-header">
-          <h2>Outside Interests</h2>
+          <h2>Interests</h2>
         </header>
 
+        {% for interest in site.data.interests %}
         <div class="resume-item">
-          <ul class="resume-item-list">
-            {% for interest in site.data.interests %}
-            <li>{{ interest.description }}</li>
-            {% endfor %}
-          </ul>
+          <h4 class="resume-item-details">{{ interests.description }}</h4>
         </div>
+        <% endfor %>
 
       </section>
       <!-- end Interests -->
