@@ -165,19 +165,21 @@
       <!-- end Associations -->
       {% endif %}
 
-      {% if site.resume_section_interests %}
+       {% if site.resume_section_interests %}
       <!-- begin Interests -->
       <section class="content-section">
 
         <header class="section-header">
-          <h2>Interests</h2>
+          <h2>Outside Interests</h2>
         </header>
 
-        {% for interest in site.data.interests %}
         <div class="resume-item">
-          <h4 class="resume-item-details">{{ interests.description }}</h4>
+          <ul class="resume-item-list">
+            {% for interest in site.data.interests %}
+            <li>{{ interest.description }}</li>
+            {% endfor %}
+          </ul>
         </div>
-        {% endfor %}
 
       </section>
       <!-- end Interests -->
